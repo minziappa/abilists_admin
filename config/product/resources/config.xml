@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+
+	<slavedb>
+		<cnt>2</cnt>
+	</slavedb>
+
+	<paging>
+		<row>
+			<cnt>10</cnt>
+		</row>
+		<limit>
+			<total>2000</total>
+		</limit>
+	</paging>
+
+	<usertech>
+		<path>tech</path>
+		<path>skills</path>
+		<path>lang</path>
+		<path>certi</path>
+	</usertech>
+
+	<upload>
+		<path>
+			<img>/home/njoonk/abilists/img/</img>
+			<temp>/home/njoonk/abilists/img/temp/</temp>
+		</path>
+	</upload>
+
+	<template>
+		<users>
+			<from>
+				<path>template/abilists/temp</path>
+				<filename>users.ftlh</filename>
+			</from>
+			<to>
+				<path>template/abilists/temp/</path>
+				<filename>users.ftlo</filename>
+			</to>		
+		</users>
+		<projects>
+			<from>
+				<path>template/abilists/temp</path>
+				<filename>projects.ftlh</filename>
+			</from>
+			<to>
+				<path>template/abilists/temp/</path>
+				<filename>projects.ftlo</filename>
+			</to>
+		</projects>
+		<task>
+			<from>
+				<path>template/abilists/temp</path>
+				<filename>task.ftlh</filename>
+			</from>
+			<to>
+				<path>template/abilists/temp/</path>
+				<filename>task.ftlo</filename>
+			</to>
+		</task>
+		<noti>
+			<from>
+				<path>template/abilists/temp</path>
+				<filename>noti.ftlh</filename>
+			</from>
+			<to>
+				<path>template/abilists/temp/</path>
+				<filename>noti.ftlo</filename>
+			</to>
+		</noti>
+	</template>
+
+	<email>
+		<from>
+			<address>heyguybug@gmail.com</address>
+		</from>
+		<id>heyguybug@gmail.com</id>
+		<pwd></pwd>
+		<signup>
+			<path>template/email</path>
+			<filename>signup.ftlh</filename>
+			<outfile>template/email/signup.ftl</outfile>
+			<url>http://www.abilists.com/login/confirmSingup</url>
+		</signup>
+		<resetpwd>
+			<path>template/email</path>
+			<filename>resetpwd.ftlh</filename>
+			<outfile>template/email/resetpwd.ftl</outfile>
+			<url>http://www.abilists.com/login/resetPwd</url>
+		</resetpwd>
+	</email>
+
+	<login>
+		<userid>
+			<length>
+				<min>3</min>
+			</length>
+		</userid>
+	</login>
+
+	<system>
+		<environment>Product</environment>
+	</system>
+
+</config>

@@ -1,0 +1,54 @@
+
+	      	      <ul class="timeline">
+
+	      			<li>
+		                <div class="timeline-badge" style="background-color: #4670b5;">
+	                	<span class="glyphicon glyphicon-chevron-left" style="line-height: 2.5;" aria-hidden="true"></span>
+	                	</div>
+	                <div class="timeline-panel">
+	                    <div class="timeline-heading">
+	                        <h5 class="timeline-title"><a href="#" onclick="viewTask('14'); return false;">2016-12-08</a></h5>
+	                    </div>
+	                    <div class="timeline-body">
+	                        <p>
+								dfadsafa...
+	                        </p>
+	                    </div>
+	                </div>
+                </li>
+
+
+	      			<li class="timeline-inverted">
+		                <div class="timeline-badge" style="background-color: #46b562;">
+	                	<span class="glyphicon glyphicon-chevron-right" style="line-height: 2.5;" aria-hidden="true"></span>
+	                	</div>
+	                <div class="timeline-panel">
+	                    <div class="timeline-heading">
+	                        <h5 class="timeline-title"><a href="#" onclick="viewTask('13'); return false;">2016-12-07</a></h5>
+	                    </div>
+	                    <div class="timeline-body">
+	                        <p>
+								[good] ...
+	                        </p>
+	                    </div>
+	                </div>
+                </li>
+
+
+	      			<li>
+		                <div class="timeline-badge" style="background-color: #4670b5;">
+	                	<span class="glyphicon glyphicon-chevron-left" style="line-height: 2.5;" aria-hidden="true"></span>
+	                	</div>
+	                <div class="timeline-panel">
+	                    <div class="timeline-heading">
+	                        <h5 class="timeline-title"><a href="#" onclick="viewTask('12'); return false;">2016-12-01</a></h5>
+	                    </div>
+	                    <div class="timeline-body">
+	                        <p>
+								[good] ...
+	                        </p>
+	                    </div>
+	                </div>
+                </li>
+
+	      </ul>

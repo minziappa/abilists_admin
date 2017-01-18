@@ -1,0 +1,1 @@
+		<li><a href="/login/"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> <@spring.message "login.menu.signin"/><span class="sr-only">(current)</span></a></li>

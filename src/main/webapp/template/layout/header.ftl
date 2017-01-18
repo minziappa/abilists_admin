@@ -1,0 +1,35 @@
+	<head>
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>index</title>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <script src="/static/lib/jquery/2.1.1/jquery.min.js"></script>
+
+    <link href="/static/css/jquery/1.11.4/smoothness/jquery-ui.css" rel="stylesheet">
+
+    <!-- These are needed for Autocompliete to input a input form. -->
+	<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/lib/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/lib/bootstrap-3.3.7/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="/static/lib/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="/static/js/abilists.js"></script>
+
+	<!-- Custom styles for this template -->
+    <link href="/static/css/signin.css" rel="stylesheet">
+    <link href="/static/css/form.css" rel="stylesheet">
+    <link href="/static/css/abilists.css" rel="stylesheet">
+
+    <!-- When pages load, it will be executed -->
+    <script type="text/javascript">
+
+    </script>
+	</head>

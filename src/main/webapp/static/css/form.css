@@ -1,0 +1,15 @@
+input.readonly {
+  border-width: 0px;
+  background-color: rgba(255, 255, 255, 0.0);;
+}
+
+/*
+div .fixed {
+    background-color: white;
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    width: 200px;
+    z-index: 9999;
+}
+*/

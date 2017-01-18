@@ -1,0 +1,36 @@
+/* Table  */
+table {
+    width:100%;
+}
+
+table, th, td {
+    border: 1px solid #eeeeec;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+tr:hover td {background:#cce0ff}
+
+input {
+	border: 1px solid #eeeeec;
+	border-radius: 3px;
+	resize: horizontal;
+}
+
+input:active {
+    width: auto;   
+}
+
+.table {
+	margin-bottom: 0px;
+}
+
+.pagination {
+	margin: 0px 0;
+}
+
+th.my_profile {
+	border-right: 1px solid white;
+}

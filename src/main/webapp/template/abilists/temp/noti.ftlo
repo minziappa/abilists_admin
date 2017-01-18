@@ -1,0 +1,7 @@
+
+		      		      <div class="list-group">
+		        <a href="#" onclick="viewNoti('1'); return false;" class="list-group-item">
+		        	<i class="glyphicon glyphicon-menu-hamburger" style="color: #f2f2f2;"></i> test1
+	            	<span class="pull-right">2017/01/15</span>
+	            </a>
+			  </div>

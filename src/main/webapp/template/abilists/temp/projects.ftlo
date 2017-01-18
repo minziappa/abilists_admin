@@ -1,0 +1,98 @@
+
+	      	      <ul class="timeline">
+
+	      			<li>
+		                <div class="timeline-badge" style="background-color: #4670b5;">
+	                	<span class="glyphicon glyphicon-chevron-left" style="line-height: 2.5;" aria-hidden="true"></span>
+	                	</div>
+	                <div class="timeline-panel">
+	                    <div class="timeline-heading">
+	                        <h5 class="timeline-title"><a href="#" onclick="viewProject('7'); return false;">good</a></h5>
+	                        <p><small class="text-muted">2016/11/24</small>
+	                        </p>
+	                    </div>
+	                    <div class="timeline-body">
+	                        <p>
+								gggoahtg...
+	                        </p>
+	                    </div>
+	                </div>
+                </li>
+
+
+	      			<li class="timeline-inverted">
+		                <div class="timeline-badge" style="background-color: #46b562;">
+	                	<span class="glyphicon glyphicon-chevron-right" style="line-height: 2.5;" aria-hidden="true"></span>
+	                	</div>
+	                <div class="timeline-panel">
+	                    <div class="timeline-heading">
+	                        <h5 class="timeline-title"><a href="#" onclick="viewProject('5'); return false;">Pro2</a></h5>
+	                        <p><small class="text-muted">2016/10/17</small>
+	                        </p>
+	                    </div>
+	                    <div class="timeline-body">
+	                        <p>
+								asdfasdf...
+	                        </p>
+	                    </div>
+	                </div>
+                </li>
+
+
+	      			<li>
+		                <div class="timeline-badge" style="background-color: #4670b5;">
+	                	<span class="glyphicon glyphicon-chevron-left" style="line-height: 2.5;" aria-hidden="true"></span>
+	                	</div>
+	                <div class="timeline-panel">
+	                    <div class="timeline-heading">
+	                        <h5 class="timeline-title"><a href="#" onclick="viewProject('4'); return false;">good</a></h5>
+	                        <p><small class="text-muted">2016/10/17</small>
+	                        </p>
+	                    </div>
+	                    <div class="timeline-body">
+	                        <p>
+								soooo
+	                        </p>
+	                    </div>
+	                </div>
+                </li>
+
+
+	      			<li class="timeline-inverted">
+		                <div class="timeline-badge" style="background-color: #46b562;">
+	                	<span class="glyphicon glyphicon-chevron-right" style="line-height: 2.5;" aria-hidden="true"></span>
+	                	</div>
+	                <div class="timeline-panel">
+	                    <div class="timeline-heading">
+	                        <h5 class="timeline-title"><a href="#" onclick="viewProject('3'); return false;">프로젝트 이름</a></h5>
+	                        <p><small class="text-muted">2016/10/17</small>
+	                        </p>
+	                    </div>
+	                    <div class="timeline-body">
+	                        <p>
+								설명1a
+	                        </p>
+	                    </div>
+	                </div>
+                </li>
+
+
+	      			<li>
+		                <div class="timeline-badge" style="background-color: #4670b5;">
+	                	<span class="glyphicon glyphicon-chevron-left" style="line-height: 2.5;" aria-hidden="true"></span>
+	                	</div>
+	                <div class="timeline-panel">
+	                    <div class="timeline-heading">
+	                        <h5 class="timeline-title"><a href="#" onclick="viewProject('1'); return false;">리뉴얼1</a></h5>
+	                        <p><small class="text-muted">2016/11/23</small>
+	                        </p>
+	                    </div>
+	                    <div class="timeline-body">
+	                        <p>
+								이번 리뉴얼은 ...
+	                        </p>
+	                    </div>
+	                </div>
+                </li>
+
+	      </ul>
