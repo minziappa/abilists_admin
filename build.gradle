@@ -124,7 +124,7 @@ allprojects {
 }
 
 jettyRun {
-	httpPort = 9001
+	httpPort = 9002
 	reload = 'automatic'
 	scanIntervalSeconds = 2
 	/* Change context path (base url). otherwise defaults to name of project */

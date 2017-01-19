@@ -18,9 +18,9 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import com.abilists.core.bean.model.UsersModel;
 
-public class OauthInterceptor implements HandlerInterceptor {
+public class OauthAdminInterceptor implements HandlerInterceptor {
 
-	final Logger logger = LoggerFactory.getLogger(OauthInterceptor.class);
+	final Logger logger = LoggerFactory.getLogger(OauthAdminInterceptor.class);
 	
 	String DEFAULT_TAG = "lang";
 	String LANG = "en-US";
@@ -101,9 +101,8 @@ public class OauthInterceptor implements HandlerInterceptor {
 //		}
 
 		// Can access without login.
-		if(pathInfo.startsWith("/login")
-				|| pathInfo.startsWith("/home")
-				|| pathInfo.equals("/")
+		if(pathInfo.startsWith("/admin/login")
+				|| pathInfo.equals("/admin/")
 				|| pathInfo.startsWith("/static")) {
 			return true;
 		}
@@ -118,7 +117,7 @@ public class OauthInterceptor implements HandlerInterceptor {
 		}else {
 			logger.debug("redirect");
 			RedirectView redirectView = new RedirectView();
-			redirectView.setUrl("/login/");
+			redirectView.setUrl("/admin/login/");
 			// redirectView.setHttp10Compatible(false);
 			ModelAndView mv = new ModelAndView(redirectView);
 			ModelAndViewDefiningException mvde = new ModelAndViewDefiningException(mv);

@@ -46,13 +46,13 @@ import com.abilists.core.bean.para.admin.SltMTechPara;
 import com.abilists.core.bean.para.admin.UdtMIndustryPara;
 import com.abilists.core.bean.para.admin.UdtMRolePara;
 import com.abilists.core.bean.para.admin.UdtMTechDetailPara;
-import com.abilists.core.controller.AbstractBaseController;
+import com.abilists.core.controller.CommonAbilistsController;
 import com.abilists.core.service.AdminMasterService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Controller
 @RequestMapping("/admin/master")
-public class MasterAbilistsController extends AbstractBaseController {
+public class MasterAbilistsController extends CommonAbilistsController {
 
 	final Logger logger = LoggerFactory.getLogger(MasterAbilistsController.class);
 

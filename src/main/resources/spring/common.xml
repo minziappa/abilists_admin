@@ -17,7 +17,11 @@
 	    <property name="basenames">
 	        <list>
 	        	<value>resources/message</value>
-	        	<value>resources/navi</value>
+	        	<value>resources/common/navi</value>
+	        	<value>resources/login</value>
+	        	<value>resources/common/profile</value>
+	        	<value>resources/common/account</value>
+	        	<value>resources/common/projects</value>
 	        	<value>resources/admin/admin</value>
 	        </list>
 	    </property>
