@@ -542,7 +542,7 @@ function changeUtLevelSelect(changedNum) {
 	var mtNoListSelected = mtNoList.options[mtNoList.selectedIndex].value;
 
 	var cdata = '{ "mtNo" : "' + mtNoListSelected + '"}';
-	var curl = "/profile/sltMTechDetailListAjax";
+	var curl = "/admin/master/sltMTechDetailListAjax";
 	var cresult = requestbyAjax(curl,cdata);
 
 	var uptLevelList = document.getElementsByName("uptLevel")[changedNum];
@@ -593,9 +593,9 @@ function changeSelectInAjax(mTechDetailKeys) {
 	}
 
 	// Set the explain to the tech
+	var mTechDetail = new Option('<@spring.message "tech.select.default.tech"/>', '0');
+	uptLevelInput.options.add(mTechDetail);
 	if (mTechDetailKeys) {
-		var mTechDetail = new Option('<@spring.message "tech.select.default.tech"/>', '0');
-		uptLevelInput.options.add(mTechDetail);
 		for (i = 0; i < mTechDetailKeys.length; i++) {
 			if(mTechDetailKeys[i].mlCode == "${lang?if_exists}") {
 				mTechDetail = new Option(mTechDetailKeys[i].mtdLevelExplain, mTechDetailKeys[i].mtdLevel);
@@ -605,7 +605,6 @@ function changeSelectInAjax(mTechDetailKeys) {
 		// TODO
 		// Set data as the selected option.
 	}
-
 }
 
 function submitNewFormUserProjectTech() {
