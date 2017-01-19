@@ -28,9 +28,9 @@
           </ul>
       	  <ul class="nav navbar-nav navbar-right">
       	  	<#if user??>
-      		  <#include "/login/naviLogin.ftl">
+      		  <#include "/login/adminNaviLogin.ftl">
 			<#else>
-      		  <#include "/login/naviLogout.ftl">
+      		  <#include "/login/adminNaviLogout.ftl">
 	     	</#if>
 
 <#include "abilistsLang.ftl"/>

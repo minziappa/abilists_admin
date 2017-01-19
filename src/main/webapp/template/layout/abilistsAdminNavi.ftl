@@ -22,7 +22,7 @@
 						<li><a href="/profile"><i class="fa fa-user fa-fw"></i> <#if user??>${user.userName?if_exists} <@spring.message "profile.menu.profile"/> </#if></a></li>
 						<li><a href="/account"><i class="fa fa-gear fa-fw"></i> <@spring.message "account.menu.settings"/></a></li>
 						<li class="divider"></li>
-						<li><a href="/login/logout"><i class="fa fa-sign-out fa-fw"></i> <@spring.message "login.sign.out"/><span class="sr-only">(current)</span></a></li>
+						<li><a href="/admin/login/logout"><i class="fa fa-sign-out fa-fw"></i> <@spring.message "login.sign.out"/><span class="sr-only">(current)</span></a></li>
 					</ul>
 				</li>
 

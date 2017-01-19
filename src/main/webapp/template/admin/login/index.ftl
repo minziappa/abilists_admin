@@ -32,7 +32,7 @@ h2 span {
 
 .bgIndex {
 	// position: relative;
-    background: url('/static/img/bgIndex.jpg') no-repeat center center fixed;
+    background: url('/static/img/bi02.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -58,8 +58,8 @@ h2 span {
 			</div>
 			<div class="col-sm-6">
 			    <form class="form-signin" role="form" action="/login/introSingup" method="POST">
-			  	    <h2 class="form-signin-heading"><@spring.message "login.sign.up"/></h2>
-			  	    <input  type="text" name="userEmail" class="form-control" placeholder="Email address" required>
+			  	    <h2 class="form-signin-heading">Administrator</h2>
+			  	    <input  type="text" name="userEmail" class="form-control" placeholder="Your Id" required>
 			  	    <div class="checkbox"></div>
 			  	    <button class="btn btn-primary btn-block" type="submit"><@spring.message "login.sign.up"/></button>
 		  	    </form>

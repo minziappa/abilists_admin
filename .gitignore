@@ -15,7 +15,4 @@ hs_err_pid*
 /.gradle
 /.settings
 
-/src/main/resources/application.*
-/config/develop/application.*
-/config/prodect/application.*
-/config/staging/application.*
+application.*
