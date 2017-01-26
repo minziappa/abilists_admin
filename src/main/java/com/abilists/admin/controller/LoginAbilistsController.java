@@ -134,7 +134,7 @@ public class LoginAbilistsController extends AbstractBaseController {
 
 		session.setMaxInactiveInterval(100*60);
 
-		return "redirect:/admin/";
+		return "redirect:/";
 	}
 
 	/**
@@ -155,7 +155,7 @@ public class LoginAbilistsController extends AbstractBaseController {
 		// Clear data in the session.
 		session.invalidate();
 
-		return "redirect:/admin/";
+		return "redirect:/";
 	}
 
 	@RequestMapping(value = {"denied"})

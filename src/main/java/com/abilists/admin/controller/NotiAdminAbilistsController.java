@@ -79,7 +79,7 @@ public class NotiAdminAbilistsController extends AbstractBaseController {
 			return "errors/error";
 		}
 
-		return "redirect:/admin/noti/sltNotiList";
+		return "redirect:sltNotiList";
 	}
 
 	/*
@@ -115,7 +115,7 @@ public class NotiAdminAbilistsController extends AbstractBaseController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/noti/sltNotiList";
+		return "redirect:sltNotiList";
 	}
 
 	/*
@@ -151,7 +151,7 @@ public class NotiAdminAbilistsController extends AbstractBaseController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/noti/sltNotiList";
+		return "redirect:sltNotiList";
 	}
 
 	/*

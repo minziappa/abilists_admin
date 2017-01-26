@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/admin/">Admin</a>
-                <a class="navbar-brand" href="http://www.abilists.com/home"><img src="/static/img/bi02.png" class="img-responsive" width="70" alt="abilists" /></a>
+                <a class="navbar-brand" href="/home"><img src="/static/img/bi02.png" class="img-responsive" width="70" alt="abilists" /></a>
             </div>
             <!-- /.navbar-header -->
 

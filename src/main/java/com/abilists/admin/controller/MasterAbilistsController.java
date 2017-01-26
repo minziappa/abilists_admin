@@ -304,7 +304,7 @@ public class MasterAbilistsController extends CommonAbilistsController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/master/sltMTechList";
+		return "redirect:sltMTechList";
 	}
 
 	/*
@@ -346,7 +346,7 @@ public class MasterAbilistsController extends CommonAbilistsController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/master/sltMTechDetailList/" + udtMTechDetailPara.getMtNo();
+		return "redirect:sltMTechDetailList/" + udtMTechDetailPara.getMtNo();
 	}
 
 	@RequestMapping(value = {"udtMRole"})
@@ -380,7 +380,7 @@ public class MasterAbilistsController extends CommonAbilistsController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/master/sltMRoleList";
+		return "redirect:sltMRoleList";
 	}
 
 	@RequestMapping(value = {"udtMIndustry"})
@@ -414,7 +414,7 @@ public class MasterAbilistsController extends CommonAbilistsController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/master/sltMIndustryList";
+		return "redirect:sltMIndustryList";
 	}
 
 	@RequestMapping(value = {"istMTech"})
@@ -448,7 +448,7 @@ public class MasterAbilistsController extends CommonAbilistsController {
 			return "errors/error";
 		}
 
-		return "redirect:/admin/master/sltMTechList";
+		return "redirect:sltMTechList";
 	}
 
 	@RequestMapping(value = {"istMTechDetail"})
@@ -477,7 +477,7 @@ public class MasterAbilistsController extends CommonAbilistsController {
 			return "admin/master/sltMTechDetailList";
 		}
 
-		return "redirect:/admin/master/sltMTechDetailList/" + istMTechDetailPara.getMtNo() + 
+		return "redirect:sltMTechDetailList/" + istMTechDetailPara.getMtNo() + 
 				"?mlCode=" + istMTechDetailPara.getMlCode();
 	}
 
@@ -510,7 +510,7 @@ public class MasterAbilistsController extends CommonAbilistsController {
 			return "errors/error";
 		}
 
-		return "redirect:/admin/master/sltMRoleList";
+		return "redirect:sltMRoleList";
 	}
 
 	@RequestMapping(value = {"istMIndustry"})
@@ -542,7 +542,7 @@ public class MasterAbilistsController extends CommonAbilistsController {
 			return "errors/error";
 		}
 
-		return "redirect:/admin/master/sltMIndustryList";
+		return "redirect:sltMIndustryList";
 	}
 
 	@RequestMapping(value = {"dltMTech"})
@@ -575,7 +575,7 @@ public class MasterAbilistsController extends CommonAbilistsController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/master/sltMTechList";
+		return "redirect:sltMTechList";
 	}
 
 	@RequestMapping(value = {"dltMTechDetail"})
@@ -608,7 +608,7 @@ public class MasterAbilistsController extends CommonAbilistsController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/master/sltMTechDetailList/" + dltMTechDetailPara.getMtNo();
+		return "redirect:sltMTechDetailList/" + dltMTechDetailPara.getMtNo();
 	}
 
 	@RequestMapping(value = {"dltMRole"})
@@ -641,7 +641,7 @@ public class MasterAbilistsController extends CommonAbilistsController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/master/sltMRoleList";
+		return "redirect:sltMRoleList";
 	}
 
 	@RequestMapping(value = {"dltMIndustry"})
@@ -674,7 +674,7 @@ public class MasterAbilistsController extends CommonAbilistsController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/master/sltMIndustryList";
+		return "redirect:sltMIndustryList";
 	}
 
 }

@@ -15,7 +15,6 @@
 	</paging>
 
 	<usertech>
-		<path>tech</path>
 		<path>skills</path>
 		<path>lang</path>
 		<path>certi</path>

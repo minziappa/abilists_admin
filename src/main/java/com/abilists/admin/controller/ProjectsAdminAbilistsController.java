@@ -222,7 +222,7 @@ public class ProjectsAdminAbilistsController extends AbstractBaseController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/project/sltProjectsList";
+		return "redirect:/project/sltProjectsList";
 	}
 
 	@RequestMapping(value = {"istProjectTech"})
@@ -258,7 +258,7 @@ public class ProjectsAdminAbilistsController extends AbstractBaseController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/project/sltProjectTechList/" + istProjectTechPara.getUpNo();
+		return "redirect:/project/sltProjectTechList/" + istProjectTechPara.getUpNo();
 	}
 
 	@RequestMapping(value = {"udtProjects"})
@@ -291,7 +291,7 @@ public class ProjectsAdminAbilistsController extends AbstractBaseController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/project/sltProjectsList";
+		return "redirect:/project/sltProjectsList";
 	}
 
 	@RequestMapping(value = {"udtProjectTech"})
@@ -327,7 +327,7 @@ public class ProjectsAdminAbilistsController extends AbstractBaseController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/project/sltProjectTechList/" + udtProjectTechPara.getUpNo();
+		return "redirect:/project/sltProjectTechList/" + udtProjectTechPara.getUpNo();
 	}
 
 	@RequestMapping(value = {"dltProjects"})
@@ -358,7 +358,7 @@ public class ProjectsAdminAbilistsController extends AbstractBaseController {
 			return "errors/error";
 		}
 
-		return "redirect:/admin/project/sltProjectsList";
+		return "redirect:/project/sltProjectsList";
 	}
 
 	@RequestMapping(value = {"dltProjectTech"})
@@ -393,7 +393,7 @@ public class ProjectsAdminAbilistsController extends AbstractBaseController {
 
 		// Pass the parameters with post.
 		redirectAttributes.addFlashAttribute("save", "completed");
-		return "redirect:/admin/project/sltProjectTechList/" + dltProjectTechPara.getUpNo();
+		return "redirect:/project/sltProjectTechList/" + dltProjectTechPara.getUpNo();
 	}
 
 }
