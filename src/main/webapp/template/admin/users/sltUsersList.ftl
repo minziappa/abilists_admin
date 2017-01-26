@@ -64,7 +64,7 @@ function confirmData(tableName) {
 	  </h3>
 	</div>
 	<div class="col-md-6">
-	<form id="searchForm" action="/admin/users/searchForUsers" method="post" onkeydown="return captureReturnKey(event)">
+	<form id="searchForm" action="users/searchForUsers" method="post" onkeydown="return captureReturnKey(event)">
 	    <div id="search0" class="input-group">
 		    <input name="userId" type="text" class="form-control" 
 		    	value="" autocomplete="off" autocorrect="off" autocapitilize="off"
@@ -229,19 +229,19 @@ function confirmData(tableName) {
 	  <#if model?exists>
 	  	<#if model.paging?exists>
 			<#if model.paging.prevPage?exists>
-			<li><a href="/admin/users/sltUsersList?nowPage=${model.paging.prevPage.nowPage}&allCount=${model.paging.allCount?c}" title="Prev" accesskey="*">Prev</span></a></li>
+			<li><a href="users/sltUsersList?nowPage=${model.paging.prevPage.nowPage}&allCount=${model.paging.allCount?c}" title="Prev" accesskey="*">Prev</span></a></li>
 			</#if>
 			<#if model.paging.pagingInfoList?has_content>
 				<#list model.paging.pagingInfoList as pageList>
 					<#if model.paging.nowPage?if_exists == pageList.pageNumber?if_exists>
 					<li class="active"><a href="#">${pageList.pageNumber} <span class="sr-only">(current)</span></a></li>
 					<#else>
-					<li><a href="/admin/users/sltUsersList?nowPage=${pageList.pageNumber}&allCount=${model.paging.allCount?c}">${pageList.pageNumber}</a></li>
+					<li><a href="users/sltUsersList?nowPage=${pageList.pageNumber}&allCount=${model.paging.allCount?c}">${pageList.pageNumber}</a></li>
 					</#if>
 				</#list>
 			</#if>
 			<#if model.paging.nextPage?exists>
-			<li><a href="/admin/users/sltUsersList?nowPage=${model.paging.nextPage.nowPage}&allCount=${model.paging.allCount?c}" accesskey="#" title="Next">Next</a></li>
+			<li><a href="users/sltUsersList?nowPage=${model.paging.nextPage.nowPage}&allCount=${model.paging.allCount?c}" accesskey="#" title="Next">Next</a></li>
 			</#if>
 		</#if>
 	  </#if>

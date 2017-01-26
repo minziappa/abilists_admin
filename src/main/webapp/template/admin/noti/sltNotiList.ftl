@@ -103,7 +103,7 @@ function removeNoti() {
 	<div class="col-md-8">
 		<h3>
 			<ol class="breadcrumb-std">
-			  <li><a href="/admin"><@spring.message "dashboard.title.home"/></a></li>
+			  <li><a href="/admin/"><@spring.message "dashboard.title.home"/></a></li>
 			  <li class="active"><@spring.message "admin.menu.notification"/></li>
 			</ol>
 		</h3>
@@ -211,7 +211,7 @@ function removeNoti() {
       <#if model??>
       <#if model.notificationList?has_content>
       <#list model.notificationList as noti>
-      <tr onmouseover="overChangeColor(this);"  onmouseout="outChangeColor(this);" onclick="selectMTech(this, '${noti.notiNo?if_exists}');">
+      <tr onmouseover="overChangeColor(this);"  onmouseout="outChangeColor(this);" onclick="selectMTech(this, '${noti.notiNo?if_exists?c}');">
       	<td>${noti.notiNo?if_exists}</td>
       	<td>${noti.notiTitle?if_exists}</td>
       	<td>${noti.notiContents?if_exists}</td>
@@ -405,7 +405,7 @@ function submitUpdateForm() {
 
 //Delete noti
 function submitFormDeleteNoti() {
-	document.updateForm.action = "/admin/noti/dltNoti";
+	document.updateForm.action = "noti/dltNoti";
 	document.updateForm.submit();
 }
 

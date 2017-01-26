@@ -134,7 +134,7 @@ function confirmData(tableName) {
 	<div class="col-md-8">
 	  <h3>
 		<ol class="breadcrumb-std">
-		  <li><a href="/admin"><@spring.message "dashboard.title.home"/></a></li>
+		  <li><a href="/admin/"><@spring.message "dashboard.title.home"/></a></li>
 		  <li class="active"><@spring.message "admin.menu.mrole"/></li>
 		</ol>
 	  </h3>

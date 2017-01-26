@@ -6,7 +6,6 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.apache.commons.configuration.Configuration;
@@ -31,7 +30,7 @@ import com.abilists.core.bean.para.admin.UdtUsersPara;
 import com.abilists.core.controller.AbstractBaseController;
 
 @Controller
-@RequestMapping("/admin/users")
+@RequestMapping("/users")
 public class UsersAdminAbilistsController extends AbstractBaseController {
 
 	final Logger logger = LoggerFactory.getLogger(UsersAdminAbilistsController.class);

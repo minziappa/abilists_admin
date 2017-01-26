@@ -51,7 +51,7 @@ import com.abilists.core.service.AdminMasterService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Controller
-@RequestMapping("/admin/master")
+@RequestMapping("/master")
 public class MasterAbilistsController extends CommonAbilistsController {
 
 	final Logger logger = LoggerFactory.getLogger(MasterAbilistsController.class);

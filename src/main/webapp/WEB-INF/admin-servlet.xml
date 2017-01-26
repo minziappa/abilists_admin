@@ -11,7 +11,7 @@
 	<!-- Configures the @Controller programming model -->
 	<mvc:annotation-driven />
 
-	<mvc:resources location="/static/" mapping="/static/**"/>
+	<!-- <mvc:resources location="/static/" mapping="/static/**"/> -->
 
 	<!-- Set The template Path -->
 	<bean id="freemarkerConfig"

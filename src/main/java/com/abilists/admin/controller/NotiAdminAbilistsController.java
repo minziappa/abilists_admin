@@ -33,7 +33,7 @@ import com.abilists.core.controller.AbstractBaseController;
 import com.abilists.core.service.NotiService;
 
 @Controller
-@RequestMapping("/admin/noti")
+@RequestMapping("/noti")
 public class NotiAdminAbilistsController extends AbstractBaseController {
 
 	final Logger logger = LoggerFactory.getLogger(NotiAdminAbilistsController.class);

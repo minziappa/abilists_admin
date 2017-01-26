@@ -46,7 +46,7 @@ h2 span {
 	<div class="transbox">
 		<div class="row">
 			<div class="col-sm-6">
-				<form class="form-signin" role="form" action="/login/login" name="sform" id="sform" method="POST">
+				<form class="form-signin" role="form" action="/login" name="sform" id="sform" method="POST">
 					<h2 class="form-signin-heading"><@spring.message "login.sign.in"/></h2>
 					<#include "../common/errorMessage.ftl"/>
 			        <input  type="text" name="userId" class="form-control" placeholder="user id" required autofocus>

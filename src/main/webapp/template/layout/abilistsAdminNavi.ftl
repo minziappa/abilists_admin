@@ -7,8 +7,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/admin">Admin</a>
-                <a class="navbar-brand" href="/abilists"><img src="/static/img/bi02.png" class="img-responsive" width="70" alt="abilists" /></a>
+                <a class="navbar-brand" href="/admin/">Admin</a>
+                <a class="navbar-brand" href="http://www.abilists.com/home"><img src="/static/img/bi02.png" class="img-responsive" width="70" alt="abilists" /></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -35,7 +35,7 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="/admin"><i class="fa fa-dashboard fa-fw"></i> <@spring.message "menu.side.dashboard"/></a>
+                            <a href="/admin/"><i class="fa fa-dashboard fa-fw"></i> <@spring.message "menu.side.dashboard"/></a>
                         </li>
                         <li>
 	                        <a href="#"><i class="fa fa-files-o fa-fw"></i> <@spring.message "admin.menu.projects"/><span class="fa arrow"></span></a>
@@ -66,10 +66,10 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/charts/sltCharts1">Charts 1</a>
+                                    <a href="/admin/charts/sltCharts1">Charts 1</a>
                                 </li>
                                 <li>
-                                    <a href="/charts/sltCharts2">Charts 2</a>
+                                    <a href="/admin/charts/sltCharts2">Charts 2</a>
                                 </li>
                             </ul>
                         </li>

@@ -30,7 +30,7 @@ import com.abilists.core.common.bean.CommonPara;
 import com.abilists.core.controller.AbstractBaseController;
 
 @Controller
-@RequestMapping("/admin")
+//@RequestMapping("/admin")
 public class AdminAbilistsController extends AbstractBaseController {
 
 	final Logger logger = LoggerFactory.getLogger(AdminAbilistsController.class);

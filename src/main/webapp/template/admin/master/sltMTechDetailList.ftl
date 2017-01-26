@@ -32,13 +32,13 @@ function removeMTechDetail() {
 		<h3>
 		<ol class="breadcrumb-std">
 		  <li><a href="/admin"><@spring.message "dashboard.title.home"/></a></li>
-		  <li><a href="/admin/master/sltMTechList"><@spring.message "admin.menu.mtech"/></a></li>
+		  <li><a href="master/sltMTechList"><@spring.message "admin.menu.mtech"/></a></li>
 		  <li class="active"><@spring.message "admin.menu.mtech.detail"/></li>
 		</ol>
 		</h3>
 	</div>
 	<div class="col-md-4">
-		<form name="sltForm" action="/admin/master/sltMTechDetailList/<#if model.mTech??>${model.mTech.mtNo?if_exists}</#if>" method="post">
+		<form name="sltForm" action="/admin/master/sltMTechDetailList/<#if model.mTech??>${model.mTech.mtNo?if_exists?c}</#if>" method="post">
 		<select class="horizon-align" name="mlCode" onchange="return sltDataList(this);">
 			<option value="" <#if model.sltMTechDetailPara.mlCode?has_content><#if model.sltMTechDetailPara.mlCode == "all">selected</#if></#if>><@spring.message "admin.button.all"/></option>
 			<option value="en" <#if model.sltMTechDetailPara.mlCode?has_content><#if model.sltMTechDetailPara.mlCode == "en">selected</#if></#if>><@spring.message "admin.button.english"/></option>
@@ -141,7 +141,7 @@ function removeMTechDetail() {
 				<button type="button" onclick="return confirmData('newFormId');" class="btn btn-primary" data-toggle="modal">Confirm</button>
 				<input class="btn btn-primary" type="button" onClick="newFormCancel();" value="취소">
 			</p>
-			<input type="hidden" name="mtNo" value="<#if model.mTech??>${model.mTech.mtNo?if_exists}</#if>"/>
+			<input type="hidden" name="mtNo" value="<#if model.mTech??>${model.mTech.mtNo?if_exists?c}</#if>"/>
 			<input type="hidden" name="mtKind" value="<#if model.mTech??>${model.mTech.mtKind?if_exists}</#if>"/>
 		</form>
 		</div>
@@ -184,7 +184,7 @@ function removeMTechDetail() {
 						</select>
 					</td>
 				</tr>
-				<input type="hidden" name="mtNo" value="<#if model.mTech??>${model.mTech.mtNo?if_exists}</#if>"/>
+				<input type="hidden" name="mtNo" value="<#if model.mTech??>${model.mTech.mtNo?if_exists?c}</#if>"/>
 				<input type="hidden" name="mtKind" value="<#if model.mTech??>${model.mTech.mtKind?if_exists}</#if>"/>
 				<input type="hidden" id="mtdNoId" name="mtdNo" />
 			</table>
@@ -220,7 +220,7 @@ function removeMTechDetail() {
 	      <#if model??>
 	      <#if model.mTechDetailList?has_content>
 	      <#list model.mTechDetailList as mTechDetail>
-	      <tr onmouseover="overChangeColor(this);"  onmouseout="outChangeColor(this);" onclick="selectMTechDetail(this, '${mTechDetail.mtdNo?if_exists}');">
+	      <tr onmouseover="overChangeColor(this);"  onmouseout="outChangeColor(this);" onclick="selectMTechDetail(this, '${mTechDetail.mtdNo?if_exists?c}');">
 	      	<td>${mTechDetail.mtdNo?if_exists}</td>
 	      	<td>${mTechDetail.mtdLevel?if_exists}</td>
 	      	<td>${mTechDetail.mtdLevelExplain?if_exists}</td>
@@ -239,19 +239,19 @@ function removeMTechDetail() {
 		    <#if model?exists>
 	    	<#if model.paging?exists>
 				<#if model.paging.prevPage?exists>
-				<li><a href="/admin/master/sltMTechDetailList?nowPage=${model.paging.prevPage.nowPage}&allCount=${model.paging.allCount?c}" title="Prev" accesskey="*">Prev</span></a></li>
+				<li><a href="master/sltMTechDetailList?nowPage=${model.paging.prevPage.nowPage}&allCount=${model.paging.allCount?c}" title="Prev" accesskey="*">Prev</span></a></li>
 				</#if>
 				<#if model.paging.pagingInfoList?has_content>
 					<#list model.paging.pagingInfoList as pageList>
 						<#if model.paging.nowPage?if_exists == pageList.pageNumber?if_exists>
 						<li class="active"><a href="#">${pageList.pageNumber} <span class="sr-only">(current)</span></a></li>
 						<#else>
-						<li><a href="/admin/master/sltMTechDetailList?nowPage=${pageList.pageNumber}&allCount=${model.paging.allCount?c}">${pageList.pageNumber}</a></li>
+						<li><a href="master/sltMTechDetailList?nowPage=${pageList.pageNumber}&allCount=${model.paging.allCount?c}">${pageList.pageNumber}</a></li>
 						</#if>
 					</#list>
 				</#if>
 				<#if model.paging.nextPage?exists>
-				<li><a href="/admin/master/sltMTechDetailList?nowPage=${model.paging.nextPage.nowPage}&allCount=${model.paging.allCount?c}" accesskey="#" title="Next">Next</a></li>
+				<li><a href="master/sltMTechDetailList?nowPage=${model.paging.nextPage.nowPage}&allCount=${model.paging.allCount?c}" accesskey="#" title="Next">Next</a></li>
 				</#if>
 			</#if>
 			</#if>

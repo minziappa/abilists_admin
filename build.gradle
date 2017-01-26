@@ -92,8 +92,6 @@ dependencies {
 	compile "org.springmodules:spring-modules-jakarta-commons:0.8"
 	compile "com.googlecode.json-simple:json-simple:1.1.1"
 	compile 'com.fasterxml.jackson.core:jackson-databind:2.8.3'
-//	compile "org.codehaus.jackson:jackson-core-asl:1.9.13"
-//	compile "org.codehaus.jackson:jackson-mapper-asl:1.9.13"
 	compile 'org.tuckey:urlrewritefilter:4.0.4'
 	compile "com.abilists:core:0.1"
 	compile "io.utility:security:0.0.1"
@@ -145,13 +143,13 @@ uploadArchives {
 
 // Release for your local
 war {
-	war.archiveName "ROOT.war"
+	war.archiveName "admin.war"
 }
 
 // Windows - C:/Users/house/Documents
 task deployWar << {
 	copy {
-		from 'build/libs/ROOT.war'
+		from 'build/libs/admin.war'
 		into '/usr/local/tomcat/webapps'
 		include '**/*.war'
 	}

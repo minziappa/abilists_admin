@@ -101,7 +101,7 @@ public class OauthAdminInterceptor implements HandlerInterceptor {
 //		}
 
 		// Can access without login.
-		if(pathInfo.startsWith("/admin/login")
+		if(pathInfo.startsWith("/login")
 				|| pathInfo.startsWith("/static")) {
 			return true;
 		}

@@ -49,7 +49,7 @@ function removeProjectTech() {
 	<div class="col-md-8">
 		<h3>
 			<ol class="breadcrumb-std">
-			  <li><a href="/admin"><@spring.message "dashboard.title.home"/></a></li>
+			  <li><a href="/admin/"><@spring.message "dashboard.title.home"/></a></li>
 			  <li><a href="/admin/project/sltProjectsList"><@spring.message "admin.menu.projects"/></a></li>
 			  <li class="active"><@spring.message "admin.menu.projects.tech.list"/></li>
 			</ol>
@@ -127,7 +127,7 @@ function removeProjectTech() {
 		
 		<#if model.userProjects??>
 		<div class="item-box" id="newUserProjectTechForm">
-		<form name="newForm" action="/admin/project/istProjectTech" method="post" onkeypress="return captureReturnKey(event);">
+		<form name="newForm" action="project/istProjectTech" method="post" onkeypress="return captureReturnKey(event);">
 			<table id="newFormId">
 			<tr>
 				<td>
@@ -175,7 +175,7 @@ function removeProjectTech() {
 
 		
 		<div class="item-box" id="updateUserProjectTechForm">
-		<form name="updateForm" action="/admin/project/udtProjectTech" method="post" onkeypress="return captureReturnKey(event);">
+		<form name="updateForm" action="project/udtProjectTech" method="post" onkeypress="return captureReturnKey(event);">
 			<table id="updateFormId">
 				<tr>
 				<td>
@@ -307,19 +307,19 @@ function removeProjectTech() {
     <#if model?exists>
     	<#if model.paging?exists>
 			<#if model.paging.prevPage?exists>
-			<li><a href="/admin/project/sltProjectTechList?nowPage=${model.paging.prevPage.nowPage}&allCount=${model.paging.allCount?c}" title="Prev" accesskey="*">Prev</span></a></li>
+			<li><a href="project/sltProjectTechList?nowPage=${model.paging.prevPage.nowPage}&allCount=${model.paging.allCount?c}" title="Prev" accesskey="*">Prev</span></a></li>
 			</#if>
 			<#if model.paging.pagingInfoList?has_content>
 				<#list model.paging.pagingInfoList as pageList>
 					<#if model.paging.nowPage?if_exists == pageList.pageNumber?if_exists>
 					<li class="active"><a href="#">${pageList.pageNumber} <span class="sr-only">(current)</span></a></li>
 					<#else>
-					<li><a href="/admin/project/sltProjectTechList?nowPage=${pageList.pageNumber}&allCount=${model.paging.allCount?c}">${pageList.pageNumber}</a></li>
+					<li><a href="project/sltProjectTechList?nowPage=${pageList.pageNumber}&allCount=${model.paging.allCount?c}">${pageList.pageNumber}</a></li>
 					</#if>
 				</#list>
 			</#if>
 			<#if model.paging.nextPage?exists>
-			<li><a href="/admin/project/sltProjectTechList?nowPage=${model.paging.nextPage.nowPage}&allCount=${model.paging.allCount?c}" accesskey="#" title="Next">Next</a></li>
+			<li><a href="project/sltProjectTechList?nowPage=${model.paging.nextPage.nowPage}&allCount=${model.paging.allCount?c}" accesskey="#" title="Next">Next</a></li>
 			</#if>
 		</#if>
 	  </#if>
@@ -417,7 +417,7 @@ function selectUserProjectTech(x, uptNo, mtNo) {
 
         $.ajax({
             type: 'POST',
-            url: '/admin/project/sltProjectTechAjax',
+            url: 'project/sltProjectTechAjax',
             contentType: "application/x-www-form-urlencoded; charset=UTF-8",
             dataType: "json",
             data: 'body={ "uptNo":"' + uptNo + '","mtNo" : "' + mtNo + '"}',
@@ -542,7 +542,7 @@ function changeUtLevelSelect(changedNum) {
 	var mtNoListSelected = mtNoList.options[mtNoList.selectedIndex].value;
 
 	var cdata = '{ "mtNo" : "' + mtNoListSelected + '"}';
-	var curl = "/admin/master/sltMTechDetailListAjax";
+	var curl = "master/sltMTechDetailListAjax";
 	var cresult = requestbyAjax(curl,cdata);
 
 	var uptLevelList = document.getElementsByName("uptLevel")[changedNum];
@@ -612,12 +612,12 @@ function submitNewFormUserProjectTech() {
 }
 
 function submitUpdateFormUserProjectTech() {
-	document.updateForm.action = "/admin/project/udtProjectTech";
+	document.updateForm.action = "project/udtProjectTech";
 	document.updateForm.submit();
 }
 
 function submitDeleteFormProjectTech() {
-	document.updateForm.action = "/admin/project/dltProjectTech";
+	document.updateForm.action = "project/dltProjectTech";
 	document.updateForm.submit();
 }
 

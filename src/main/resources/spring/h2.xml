@@ -13,21 +13,21 @@
 
     <bean id="mysqlMaster" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="org.h2.Driver"/>
-        <property name="url" value="jdbc:h2:~/abilists/h2db;IGNORECASE=TRUE;DB_CLOSE_DELAY=-1;MODE=MYSQL;AUTO_RECONNECT=TRUE;INIT=create schema if not exists abilists\;SET SCHEMA abilists;AUTO_SERVER=TRUE"/>
+        <property name="url" value="jdbc:h2:~/abilists/h2db;IGNORECASE=TRUE;DB_CLOSE_DELAY=10;MODE=MYSQL;AUTO_RECONNECT=TRUE;INIT=create schema if not exists abilists\;SET SCHEMA abilists;AUTO_SERVER=TRUE"/>
         <property name="username" value="sa"/>
         <property name="password" value=""/>
         <property name="maxActive" value="20"/>
     </bean>
     <bean id="mysqlSlave00" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="org.h2.Driver"/>
-        <property name="url" value="jdbc:h2:~/abilists/h2db;IGNORECASE=TRUE;DB_CLOSE_DELAY=-1;MODE=MYSQL;AUTO_RECONNECT=TRUE;INIT=create schema if not exists abilists\;SET SCHEMA abilists;AUTO_SERVER=TRUE"/>
+        <property name="url" value="jdbc:h2:~/abilists/h2db;IGNORECASE=TRUE;DB_CLOSE_DELAY=10;MODE=MYSQL;AUTO_RECONNECT=TRUE;INIT=create schema if not exists abilists\;SET SCHEMA abilists;AUTO_SERVER=TRUE"/>
         <property name="username" value="sa"/>
         <property name="password" value=""/>
         <property name="maxActive" value="20"/>
     </bean>
     <bean id="mysqlSlave01" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="org.h2.Driver"/>
-        <property name="url" value="jdbc:h2:~/abilists/h2db;IGNORECASE=TRUE;DB_CLOSE_DELAY=-1;MODE=MYSQL;AUTO_RECONNECT=TRUE;INIT=create schema if not exists abilists\;SET SCHEMA abilists;AUTO_SERVER=TRUE"/>
+        <property name="url" value="jdbc:h2:~/abilists/h2db;IGNORECASE=TRUE;DB_CLOSE_DELAY=10;MODE=MYSQL;AUTO_RECONNECT=TRUE;INIT=create schema if not exists abilists\;SET SCHEMA abilists;AUTO_SERVER=TRUE"/>
         <property name="username" value="sa"/>
         <property name="password" value=""/>
         <property name="maxActive" value="20"/>
@@ -39,7 +39,7 @@
             <list>
                 <value>classpath:sql/create_abilists.ddl</value>
                 <value>classpath:sql/function_abilists.sql</value>
-                <!-- <value>classpath:sql/insert_abilists.sql</value>  -->
+                <value>classpath:sql/insert_abilists.sql</value>
             </list>
         </property>
         <property name="continueOnError" value="true"/>

@@ -249,7 +249,7 @@ function confirmData(tableName) {
       <#if model??>
       <#if model.mTechList?has_content>
       <#list model.mTechList as mTech>
-      <tr onmouseover="overChangeColor(this);"  onmouseout="outChangeColor(this);" onclick="selectMTech(this, '${mTech.mtNo?if_exists}');">
+      <tr onmouseover="overChangeColor(this);"  onmouseout="outChangeColor(this);" onclick="selectMTech(this, '${mTech.mtNo?if_exists?c}');">
       	<td>${mTech.mtNo?if_exists}</td>
       	<td>${mTech.mtSkill?if_exists}</td>
       	<td>${mTech.mtKind?if_exists}</td>

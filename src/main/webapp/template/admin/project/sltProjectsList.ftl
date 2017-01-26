@@ -202,7 +202,7 @@ function validateUpdateForm(tableName) {
 	<div class="col-md-6">
 		<h3>
 			<ol class="breadcrumb-std">
-			  <li><a href="/admin"><@spring.message "dashboard.title.home"/></a></li>
+			  <li><a href="/admin/"><@spring.message "dashboard.title.home"/></a></li>
 			  <li class="active"><@spring.message "admin.menu.projects"/></li>
 			</ol>
 		</h3>
@@ -443,19 +443,19 @@ function validateUpdateForm(tableName) {
 	    <#if model?exists>
       	<#if model.paging?exists>
 			<#if model.paging.prevPage?exists>
-			<li><a href="/admin/projects/sltProjectsList?nowPage=${model.paging.prevPage.nowPage}&allCount=${model.paging.allCount?c}" title="Prev" accesskey="*">Prev</span></a></li>
+			<li><a href="projects/sltProjectsList?nowPage=${model.paging.prevPage.nowPage}&allCount=${model.paging.allCount?c}" title="Prev" accesskey="*">Prev</span></a></li>
 			</#if>
 			<#if model.paging.pagingInfoList?has_content>
 				<#list model.paging.pagingInfoList as pageList>
 					<#if model.paging.nowPage?if_exists == pageList.pageNumber?if_exists>
 					<li class="active"><a href="#">${pageList.pageNumber} <span class="sr-only">(current)</span></a></li>
 					<#else>
-					<li><a href="/admin/projects/sltProjectsList?nowPage=${pageList.pageNumber}&allCount=${model.paging.allCount?c}">${pageList.pageNumber}</a></li>
+					<li><a href="projects/sltProjectsList?nowPage=${pageList.pageNumber}&allCount=${model.paging.allCount?c}">${pageList.pageNumber}</a></li>
 					</#if>
 				</#list>
 			</#if>
 			<#if model.paging.nextPage?exists>
-			<li><a href="/admin/projects/sltProjectsList?nowPage=${model.paging.nextPage.nowPage}&allCount=${model.paging.allCount?c}" accesskey="#" title="Next">Next</a></li>
+			<li><a href="projects/sltProjectsList?nowPage=${model.paging.nextPage.nowPage}&allCount=${model.paging.allCount?c}" accesskey="#" title="Next">Next</a></li>
 			</#if>
 		</#if>
 		</#if>

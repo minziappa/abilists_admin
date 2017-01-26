@@ -46,7 +46,7 @@ import com.abilists.core.service.UsersService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Controller
-@RequestMapping("/admin/project")
+@RequestMapping("/project")
 public class ProjectsAdminAbilistsController extends AbstractBaseController {
 
 	final Logger logger = LoggerFactory.getLogger(ProjectsAdminAbilistsController.class);

@@ -39,7 +39,7 @@ import com.abilists.core.service.NotiService;
  */
 @SessionAttributes(value = {"commonBean", "userPicture"})
 @Controller
-@RequestMapping("/admin/login")
+@RequestMapping("/login")
 public class LoginAbilistsController extends AbstractBaseController {
 
 	final String TOKEN_KEY = "tokenKey";
@@ -134,7 +134,7 @@ public class LoginAbilistsController extends AbstractBaseController {
 
 		session.setMaxInactiveInterval(100*60);
 
-		return "redirect:/admin";
+		return "redirect:/admin/";
 	}
 
 	/**
@@ -155,7 +155,7 @@ public class LoginAbilistsController extends AbstractBaseController {
 		// Clear data in the session.
 		session.invalidate();
 
-		return "redirect:/admin";
+		return "redirect:/admin/";
 	}
 
 	@RequestMapping(value = {"denied"})

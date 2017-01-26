@@ -57,7 +57,7 @@ h2 span {
 		        </form>
 			</div>
 			<div class="col-sm-6">
-			    <form class="form-signin" role="form" action="/login/introSingup" method="POST">
+			    <form class="form-signin" role="form" action="/admin/login/introSingup" method="POST">
 			  	    <h2 class="form-signin-heading">Administrator</h2>
 			  	    <input  type="text" name="userEmail" class="form-control" placeholder="Your Id" required>
 			  	    <div class="checkbox"></div>

@@ -34,7 +34,7 @@ import com.abilists.core.controller.AbstractBaseController;
 import com.abilists.core.service.TaskService;
 
 @Controller
-@RequestMapping("/admin/project")
+@RequestMapping("/project")
 public class TaskAdminAbilistsController extends AbstractBaseController {
 
 	final Logger logger = LoggerFactory.getLogger(TaskAdminAbilistsController.class);
