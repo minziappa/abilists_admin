@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+	"HTTP://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<!-- These settings control SqlMapClient configuration details, primarily to do with transaction
+	management. They are all optional (more detail later in this document). -->
+
+	<settings>
+		<setting name="defaultStatementTimeout" value="5000" />
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+ 	</settings>
+
+	<mappers>
+		<mapper resource="sqlMap/sLoginSql.xml" />
+		<mapper resource="sqlMap/sMasterSql.xml" />
+		<mapper resource="sqlMap/sUsersSql.xml" />
+		<mapper resource="sqlMapH2/sAdminSqlH2.xml" />
+		<mapper resource="sqlMap/sNotiSql.xml" />
+		<mapper resource="sqlMap/sJoinSql.xml" />
+		<mapper resource="sqlMap/sSumSql.xml" />
+	</mappers>
+
+</configuration>

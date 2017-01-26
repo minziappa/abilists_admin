@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.abilists.core.dao.SAdminDao">
+
+	<select id="sltAdmin" parameterType="map" 
+		resultType="com.abilists.core.bean.model.AdminModel">
+		SELECT
+			admin_no,
+			admin_id,
+			admin_name,
+			admin_email,
+			admin_auth,
+			admin_status,
+			admin_delete,
+			insert_time,
+			update_time
+		FROM
+			admin
+		WHERE
+			admin_no = #{adminNo}
+	</select>
+
+	<select id="sltAdminMt" parameterType="map" 
+		resultType="com.abilists.core.bean.model.AdminMtModel">
+		SELECT
+			am_no,
+			am_title,
+			am_weight,
+			am_explain,
+			am_status,
+			am_delete,
+			mt_no,
+			insert_time,
+			update_time
+		FROM
+			admin_mt
+		WHERE
+			am_no = #{amNo}
+	</select>
+
+	<select id="sltAdminList" 
+		resultType="com.abilists.core.bean.model.AdminModel">
+		SELECT
+			admin_no,
+			admin_id,
+			admin_name,
+			admin_email,
+			admin_auth,
+			admin_status,
+			admin_delete,
+			insert_time,
+			update_time
+		FROM
+			admin
+	</select>
+
+	<select id="sltAdminMtList" 
+		resultType="com.abilists.core.bean.model.AdminMtModel">
+		SELECT
+			am_no,
+			am_title,
+			am_weight,
+			am_explain,
+			am_status,
+			am_delete,
+			mt_no,
+			insert_time,
+			update_time
+		FROM
+			admin_mt
+	</select>
+
+<!-- TODO : Duplicated with the user -->
+	<select id="sltAdminTaskList" 
+		resultType="com.abilists.core.bean.model.UserTaskModel">
+		SELECT
+			*
+		FROM
+			user_task
+		WHERE
+			utk_delete = '0'
+		ORDER BY 
+			utk_no DESC
+		<if test="nowPage != null">
+		LIMIT
+			#{nowPage}, #{row}
+		</if>
+	</select>
+
+	<select id="sltAdminUserSumByMonth" parameterType="map" 
+		resultType="com.abilists.core.bean.model.sum.AdminUsersSumByMonthModel">
+		SELECT 
+			count(insert_time) as cnt,
+			FORMATDATETIME(insert_time, '%Y-%m') as month
+		FROM 
+			users 
+		WHERE 
+			insert_time <![CDATA[>=]]> #{startDate} AND
+			insert_time <![CDATA[<=]]> #{endDate}
+		GROUP BY
+			FORMATDATETIME(insert_time, '%Y-%m');
+	</select>
+
+	<select id="sltAdminProjectsSumByStatus" parameterType="map" 
+		resultType="com.abilists.core.bean.model.sum.AdminProjectsSumByStatusModel">
+		SELECT 
+			count(up_status) as cnt,
+			up_status
+		FROM 
+			user_projects
+		WHERE
+			up_status is not null
+		GROUP BY
+			up_status
+	</select>
+
+	<select id="sltAdminTaskSum" resultType="java.lang.Integer">
+		SELECT
+			COUNT(*) as cnt
+		FROM
+			user_task
+		WHERE
+			utk_delete = '0'
+	</select>
+
+</mapper>

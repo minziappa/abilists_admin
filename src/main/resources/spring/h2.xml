@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <bean id="mysqlMaster" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="org.h2.Driver"/>
+        <property name="url" value="jdbc:h2:~/abilists/h2db;IGNORECASE=TRUE;DB_CLOSE_DELAY=-1;MODE=MYSQL;AUTO_RECONNECT=TRUE;INIT=create schema if not exists abilists\;SET SCHEMA abilists;AUTO_SERVER=TRUE"/>
+        <property name="username" value="sa"/>
+        <property name="password" value=""/>
+        <property name="maxActive" value="20"/>
+    </bean>
+    <bean id="mysqlSlave00" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="org.h2.Driver"/>
+        <property name="url" value="jdbc:h2:~/abilists/h2db;IGNORECASE=TRUE;DB_CLOSE_DELAY=-1;MODE=MYSQL;AUTO_RECONNECT=TRUE;INIT=create schema if not exists abilists\;SET SCHEMA abilists;AUTO_SERVER=TRUE"/>
+        <property name="username" value="sa"/>
+        <property name="password" value=""/>
+        <property name="maxActive" value="20"/>
+    </bean>
+    <bean id="mysqlSlave01" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="org.h2.Driver"/>
+        <property name="url" value="jdbc:h2:~/abilists/h2db;IGNORECASE=TRUE;DB_CLOSE_DELAY=-1;MODE=MYSQL;AUTO_RECONNECT=TRUE;INIT=create schema if not exists abilists\;SET SCHEMA abilists;AUTO_SERVER=TRUE"/>
+        <property name="username" value="sa"/>
+        <property name="password" value=""/>
+        <property name="maxActive" value="20"/>
+    </bean>
+
+    <bean id="mdbInit" class="org.springframework.jdbc.datasource.init.ResourceDatabasePopulator">
+    	<property name="sqlScriptEncoding" value="UTF-8"/>
+        <property name="scripts">
+            <list>
+                <value>classpath:sql/create_abilists.ddl</value>
+                <value>classpath:sql/function_abilists.sql</value>
+                <!-- <value>classpath:sql/insert_abilists.sql</value>  -->
+            </list>
+        </property>
+        <property name="continueOnError" value="true"/>
+    </bean>
+
+    <bean id="mInitializer" class="org.springframework.jdbc.datasource.init.DataSourceInitializer">
+        <property name="dataSource"><ref bean="mysqlMaster"/></property>
+        <property name="databasePopulator"><ref bean="mdbInit"/></property>
+ 		<property name="enabled" value="true" />
+    </bean>
+
+	<!-- Annotation Transaction -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="mysqlMaster" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<!-- For transaction -->
+	<bean id="sqlSessionMasterFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="mysqlMaster" />  
+		<property name="configLocation" value="classpath:masterMapH2.xml"/>
+	</bean>
+
+	<!-- Slave-->
+	<bean id="sqlSessionSlaveFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="mysqlSlave00" />
+		<property name="configLocation" value="classpath:slaveMapH2.xml"/>
+	</bean>
+
+</beans>

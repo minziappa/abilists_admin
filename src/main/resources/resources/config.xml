@@ -24,8 +24,8 @@
 
 	<upload>
 		<path>
-			<img>/home/njoonk/git/abilists/img/</img>
-			<temp>/home/njoonk/git/abilists/img/temp/</temp>
+			<img>/home/joonk/git/abilists_app/img/</img>
+			<temp>/home/joonk/git/abilists_app/img/temp/</temp>
 		</path>
 	</upload>
 

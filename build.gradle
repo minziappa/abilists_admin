@@ -102,7 +102,7 @@ dependencies {
 	compile "io.utility:image:0.0.1"
 	compile "io.utility:validate:0.0.2"
 	compile "io.paging:paging:0.2"
-
+	compile 'com.h2database:h2:1.4.193'
 	provided "org.apache.tomcat:tomcat-servlet-api:8.5.5"
 	testCompile "junit:junit:4.+"
 }

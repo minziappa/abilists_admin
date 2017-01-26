@@ -124,7 +124,6 @@ function confirmData(tableName) {
 	<form name="sltForm" action="sltMTechList" method="post">
 		<select class="horizon-align" name="mtSkill" onchange="return sltDataList(this);">
 			<option value="" <#if model.sltMTechPara.mtSkill?has_content><#if model.sltMTechPara.mtSkill == "all">selected</#if></#if>><@spring.message "tech.button.all"/></option>
-			<option value="techs" <#if model.sltMTechPara.mtSkill?has_content><#if model.sltMTechPara.mtSkill == "techs">selected</#if></#if>><@spring.message "tech.button.techs"/></option>
 			<option value="skills" <#if model.sltMTechPara.mtSkill?has_content><#if model.sltMTechPara.mtSkill == "skills">selected</#if></#if>><@spring.message "tech.button.skills"/></option>
 			<option value="lang" <#if model.sltMTechPara.mtSkill?has_content><#if model.sltMTechPara.mtSkill == "lang">selected</#if></#if>><@spring.message "tech.button.lang"/></option>
 			<option value="certi" <#if model.sltMTechPara.mtSkill?has_content><#if model.sltMTechPara.mtSkill == "certi">selected</#if></#if>><@spring.message "tech.button.certi"/></option>
