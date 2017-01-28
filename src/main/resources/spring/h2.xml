@@ -37,9 +37,18 @@
     	<property name="sqlScriptEncoding" value="UTF-8"/>
         <property name="scripts">
             <list>
-                <value>classpath:sql/create_abilists.ddl</value>
+            	<value>classpath:sql/create_abilists.ddl</value>
                 <value>classpath:sql/function_abilists.sql</value>
                 <value>classpath:sql/insert_abilists.sql</value>
+            </list>
+        </property>
+        <property name="continueOnError" value="true"/>
+    </bean>
+    <bean id="dbInit" class="org.springframework.jdbc.datasource.init.ResourceDatabasePopulator">
+    	<property name="sqlScriptEncoding" value="UTF-8"/>
+        <property name="scripts">
+            <list>
+                <value>classpath:sql/function_abilists.sql</value>
             </list>
         </property>
         <property name="continueOnError" value="true"/>
@@ -48,6 +57,16 @@
     <bean id="mInitializer" class="org.springframework.jdbc.datasource.init.DataSourceInitializer">
         <property name="dataSource"><ref bean="mysqlMaster"/></property>
         <property name="databasePopulator"><ref bean="mdbInit"/></property>
+ 		<property name="enabled" value="true" />
+    </bean>
+    <bean id="sInitializer0" class="org.springframework.jdbc.datasource.init.DataSourceInitializer">
+        <property name="dataSource"><ref bean="mysqlSlave00"/></property>
+        <property name="databasePopulator"><ref bean="dbInit"/></property>
+ 		<property name="enabled" value="true" />
+    </bean>
+    <bean id="sInitializer1" class="org.springframework.jdbc.datasource.init.DataSourceInitializer">
+        <property name="dataSource"><ref bean="mysqlSlave01"/></property>
+        <property name="databasePopulator"><ref bean="dbInit"/></property>
  		<property name="enabled" value="true" />
     </bean>
 
