@@ -14,7 +14,6 @@
 	<bean id="cipherUtility" class="io.utility.security.CipherUtility" scope="singleton">
 		<constructor-arg value="${security.cipher.pwd}"/>
 	</bean>
-	<!-- <bean id="startStopService" class="com.abilists.core.service.StartStopService" init-method="start" destroy-method="stop"/>  -->
 	<bean id="strEmailPwd" class="java.lang.String" scope="singleton">
 		<constructor-arg value="${email.emailer.pwd}"/>
 	</bean>

@@ -37,9 +37,7 @@
     	<property name="sqlScriptEncoding" value="UTF-8"/>
         <property name="scripts">
             <list>
-            	<value>classpath:sql/create_abilists.ddl</value>
                 <value>classpath:sql/function_abilists.sql</value>
-                <value>classpath:sql/insert_abilists.sql</value>
             </list>
         </property>
         <property name="continueOnError" value="true"/>
