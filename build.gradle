@@ -92,7 +92,7 @@ dependencies {
 	compile "org.springmodules:spring-modules-jakarta-commons:0.8"
 	compile "com.googlecode.json-simple:json-simple:1.1.1"
 	compile 'com.fasterxml.jackson.core:jackson-databind:2.8.3'
-	compile 'org.tuckey:urlrewritefilter:4.0.4'
+//	compile 'org.tuckey:urlrewritefilter:4.0.4'
 	compile "com.abilists:core:0.1"
 	compile "io.utility:security:0.0.1"
 	compile "io.utility:letter:0.0.1"

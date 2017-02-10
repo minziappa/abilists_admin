@@ -108,8 +108,6 @@ public class LoginServiceImpl extends AbstractService implements LoginService {
 		email.setMsg(body);
 		email.setSubject("Please, complete your register");
 
-		logger.info("pwd >>>> " + strEmailPwd);
-
 		Emailer.sendEmail(email, configuration.getString("email.id"), strEmailPwd);
 	}
 
